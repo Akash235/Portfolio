@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akash's Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind CDN -->
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTn7+N2BJz2kRyjPe+ta7HpPv8p6ujB5NTr0O1dyHZoGRBIdhK1k1sFH6Bb/f8+w6Z0zCjLvUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
 <!-- Custom styles and animations -->
 <style>
@@ -116,28 +117,80 @@
             <p class="text-gray-700 leading-relaxed">I am a highly experienced Full-Stack Developer specializing in building large-scale web and mobile applications, managing cloud-based infrastructures, and leading development teams. With extensive experience in **Freelance Development**, I've delivered impactful projects across various industries, enhancing business operations through technology. Currently, I'm a **Team Lead at Eligo Apptech Pvt. Ltd.**, leading a team of talented developers and overseeing complex development initiatives.</p>
         </div>
     </section>
-
-    <!-- Skills Section -->
     <section id="skills" class="py-16 bg-gray-200">
         <div class="max-w-7xl mx-auto px-4">
-            <h3 class="text-3xl font-bold text-center mb-6">Skills</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                    <h4 class="text-2xl font-semibold mb-4">Languages & Frameworks</h4>
-                    <p>Laravel, React Native, Python, Ruby on Rails, AngularJS, Node.js, Ionic Framework</p>
+            <h3 class="text-3xl font-bold text-center mb-10">Skills</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Languages & Frameworks -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="flex flex-col items-center mb-4">
+                        <!-- Code SVG with Adjusted Size -->
+                        <svg class="w-10 h-10 text-blue-500 mb-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"></path>
+                        </svg>
+                        <h4 class="text-2xl font-semibold">Languages & Frameworks</h4>
+                    </div>
+                    <p class="text-gray-700 mt-4">
+                        I have extensive experience in modern programming languages and frameworks for both front-end and back-end development. 
+                        I specialize in building scalable, maintainable, and high-performance web and mobile applications.
+                    </p>
+                    <ul class="text-gray-600 text-left mt-4">
+                        <li><strong>Laravel</strong> – Advanced knowledge in creating dynamic web applications and APIs.</li>
+                        <li><strong>React Native</strong> – Proficient in building mobile applications for iOS and Android platforms.</li>
+                        <li><strong>Python</strong> – Expertise in scripting, automation, and backend development.</li>
+                        <li><strong>Node.js</strong> – Building scalable, event-driven server-side applications.</li>
+                        <li><strong>Ionic Framework</strong> – Experience in creating cross-platform mobile applications.</li>
+                    </ul>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                    <h4 class="text-2xl font-semibold mb-4">DevOps & Cloud</h4>
-                    <p>Kubernetes, Docker, AWS, CI/CD Pipelines, Jenkins, MySQL Cluster</p>
+    
+                <!-- Card 2: DevOps & Cloud -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="flex flex-col items-center mb-4">
+                        <!-- Cloud SVG -->
+                        <svg class="w-10 h-10 text-green-500 mb-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M3 7v10h2V7H3zm16 10h2V7h-2v10zM7 7v10l6 3 6-3V7L13 4 7 7z"></path>
+                        </svg>
+                        <h4 class="text-2xl font-semibold">DevOps & Cloud</h4>
+                    </div>
+                    <p class="text-gray-700 mt-4">
+                        I have a strong understanding of cloud infrastructure and DevOps tools, allowing me to deploy, manage, and scale applications efficiently in cloud environments.
+                    </p>
+                    <ul class="text-gray-600 text-left mt-4">
+                        <li><strong>Kubernetes</strong> – Managing containerized applications at scale using Kubernetes clusters.</li>
+                        <li><strong>Docker</strong> – Building, testing, and deploying containerized applications with Docker.</li>
+                        <li><strong>AWS</strong> – Hands-on experience with Amazon Web Services, including EC2, S3, Lambda, and RDS.</li>
+                        <li><strong>CI/CD Pipelines</strong> – Automating testing, building, and deployment workflows for faster delivery.</li>
+                        <li><strong>MySQL Cluster</strong> – Experience in setting up and managing MySQL clusters for high availability and redundancy.</li>
+                    </ul>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                    <h4 class="text-2xl font-semibold mb-4">Cybersecurity & IoT</h4>
-                    <p>Metasploit, Vulnerability Scanning, Raspberry Pi, Web Security, Penetration Testing</p>
+    
+                <!-- Card 3: Cybersecurity & IoT -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="flex flex-col items-center mb-4">
+                        <!-- Shield SVG -->
+                        <svg class="w-10 h-10 text-yellow-500 mb-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M12 22s8-4.418 8-10V5.236C18.364 4.508 15.055 3 12 3S5.636 4.508 4 5.236V12c0 5.582 8 10 8 10z"></path>
+                        </svg>
+                        <h4 class="text-2xl font-semibold">Cybersecurity & IoT</h4>
+                    </div>
+                    <p class="text-gray-700 mt-4">
+                        My experience spans from implementing secure web applications to IoT-based systems, ensuring that both data and infrastructure are protected from vulnerabilities.
+                    </p>
+                    <ul class="text-gray-600 text-left mt-4">
+                        <li><strong>Metasploit</strong> – Knowledge of penetration testing and vulnerability assessment using Metasploit framework.</li>
+                        <li><strong>Raspberry Pi</strong> – Experience with IoT solutions using Raspberry Pi for automation and monitoring.</li>
+                        <li><strong>Web Security</strong> – Implementing best practices for secure web applications, including OWASP standards.</li>
+                        <li><strong>Penetration Testing</strong> – Conducting security assessments to identify and mitigate risks.</li>
+                        <li><strong>Vulnerability Scanning</strong> – Using tools to discover and fix vulnerabilities in web applications and network infrastructure.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
-
+    
+    
+    
+    
     <!-- Freelance Projects Section (using cards) -->
     <section id="freelance-projects" class="py-16">
         <div class="max-w-7xl mx-auto px-4">
