@@ -66,22 +66,48 @@
 </head>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0">
-                    <h1 class="text-2xl font-bold">Akash's Portfolio</h1>
-                </div>
-                <div>
-                    <a href="#about" class="text-gray-800 hover:text-blue-600 px-3 py-2">About</a>
-                    <a href="#skills" class="text-gray-800 hover:text-blue-600 px-3 py-2">Skills</a>
-                    <a href="#experience" class="text-gray-800 hover:text-blue-600 px-3 py-2">Experience</a>
-                    <a href="#projects" class="text-gray-800 hover:text-blue-600 px-3 py-2">Projects</a>
-                    <a href="#contact" class="text-gray-800 hover:text-blue-600 px-3 py-2">Contact</a>
-                </div>
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex-shrink-0">
+                <h1 class="text-2xl font-bold">Akash's Portfolio</h1>
+            </div>
+            <!-- Mobile menu button -->
+            <div class="block lg:hidden">
+                <button id="menu-btn" class="text-gray-800 hover:text-blue-600 focus:outline-none">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex">
+                <a href="#about" class="text-gray-800 hover:text-blue-600 px-3 py-2">About</a>
+                <a href="#skills" class="text-gray-800 hover:text-blue-600 px-3 py-2">Skills</a>
+                <a href="#experience" class="text-gray-800 hover:text-blue-600 px-3 py-2">Experience</a>
+                <a href="#projects" class="text-gray-800 hover:text-blue-600 px-3 py-2">Projects</a>
+                <a href="#contact" class="text-gray-800 hover:text-blue-600 px-3 py-2">Contact</a>
             </div>
         </div>
-    </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden px-2 pt-2 pb-3">
+        <a href="#about" class="block text-gray-800 hover:text-blue-600 px-3 py-2">About</a>
+        <a href="#skills" class="block text-gray-800 hover:text-blue-600 px-3 py-2">Skills</a>
+        <a href="#experience" class="block text-gray-800 hover:text-blue-600 px-3 py-2">Experience</a>
+        <a href="#projects" class="block text-gray-800 hover:text-blue-600 px-3 py-2">Projects</a>
+        <a href="#contact" class="block text-gray-800 hover:text-blue-600 px-3 py-2">Contact</a>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</nav>
 
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-20 relative overflow-hidden">
@@ -184,6 +210,7 @@
                         <li><strong>Vulnerability Scanning</strong> – Using tools to discover and fix vulnerabilities in web applications and network infrastructure.</li>
                     </ul>
                 </div>
+
             </div>
         </div>
     </section>
@@ -233,27 +260,45 @@
     <!-- Experience Section -->
     <section id="experience" class="py-16 bg-gray-200">
         <div class="max-w-7xl mx-auto px-4">
-            <h3 class="text-3xl font-bold text-center mb-6">Professional Experience</h3>
+            <h3 class="text-3xl font-bold text-center mb-10">Professional Experience</h3>
             <div class="space-y-8">
-                <!-- Job 1 -->
+                <!-- Job 1: Team Leader -->
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h4 class="text-2xl font-semibold mb-2">Team Leader at Eligo Apptech Pvt. Ltd. <span class="text-gray-500">(Jan 2021 - Present)</span></h4>
-                    <p class="text-gray-700 leading-relaxed">Leading a team of developers to deliver cutting-edge solutions and drive development across multiple products. Key responsibilities include:</p>
-                    <ul class="list-disc list-inside text-left text-gray-700 leading-relaxed">
-                        <li>Overseeing complex development projects focused on **scalability** and **performance optimization**.</li>
+                    <div class="flex items-center mb-2">
+                        <!-- Company Logo for Eligo Apptech -->
+                        <img src="eligo_logo.png" alt="Eligo Apptech Logo" class="w-12 h-12 mr-4">
+                        <h4 class="text-2xl font-semibold">Team Leader at Eligo Apptech Pvt. Ltd. 
+                            <span class="text-gray-500">(Jan 2021 - Present)</span>
+                        </h4>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Leading a team of developers to deliver cutting-edge solutions and drive development across multiple products. Key responsibilities include:
+                    </p>
+                    <ul class="list-disc list-inside text-left text-gray-700 leading-relaxed mt-4">
+                        <li>Overseeing complex development projects focused on <strong>scalability</strong> and <strong>performance optimization</strong>.</li>
                         <li>Managing Kubernetes-based infrastructure and automating CI/CD pipelines for efficient deployment.</li>
-                        <li>Improving overall system performance by **30%** through database optimization and resource scaling.</li>
+                        <li>Improving overall system performance by <strong>30%</strong> through database optimization and resource scaling.</li>
                         <li>Collaborating with stakeholders and managing team operations to ensure timely project delivery.</li>
                     </ul>
                 </div>
-                <!-- Internship Experience -->
+    
+                <!-- Job 2: Internship Experience at Qset -->
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h4 class="text-2xl font-semibold mb-2">Intern at Qset <span class="text-gray-500">(Oct 2017 - May 2018)</span></h4>
-                    <p class="text-gray-700 leading-relaxed">Developed web applications using **Ruby on Rails** and assisted in deployment processes for production environments, gaining valuable experience in backend development and deployment strategies.</p>
+                    <div class="flex items-center mb-2">
+                        <!-- Company Logo for Qset -->
+                        <img src="qset_logo.png" alt="Qset Logo" class="w-12 h-12 mr-4">
+                        <h4 class="text-2xl font-semibold">Intern at Qset 
+                            <span class="text-gray-500">(Oct 2017 - May 2018)</span>
+                        </h4>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Developed web applications using <strong>Ruby on Rails</strong> and assisted in deployment processes for production environments, gaining valuable experience in backend development and deployment strategies.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <!-- Projects Section -->
     <section id="projects" class="py-16">
@@ -287,7 +332,7 @@
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h3 class="text-3xl font-bold mb-6">Contact Me</h3>
             <p class="text-gray-700 mb-4">I'd love to hear from you! Feel free to reach out for collaborations, freelance work, or tech discussions.</p>
-            <a href="mailto:akash@example.com" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-full">Email Me</a>
+            <a href="mailto:pawarakash235@gmail.com" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-full">Email Me</a>
         </div>
     </section>
 
