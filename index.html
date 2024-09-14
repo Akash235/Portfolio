@@ -5,6 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akash's Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind CDN -->
+   
+
+<!-- Custom styles and animations -->
+<style>
+    /* Custom fade-in animations */
+    @keyframes fade-in {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0px); }
+    }
+    
+    .animate-fade-in {
+        animation: fade-in 1s forwards;
+    }
+    
+    .animate-fade-in.delay-500 {
+        animation-delay: 0.5s;
+    }
+
+    /* 3D Floating animations for background elements */
+    @keyframes float-3d {
+        0% {
+            transform: translateY(0px) rotate3d(1, 1, 0, 0deg);
+        }
+        50% {
+            transform: translateY(-20px) rotate3d(1, 1, 0, 30deg);
+        }
+        100% {
+            transform: translateY(0px) rotate3d(1, 1, 0, 0deg);
+        }
+    }
+
+    .animate-float-3d {
+        animation: float-3d 6s ease-in-out infinite;
+    }
+
+    .animate-float-3d.delay-500 {
+        animation-delay: 0.5s;
+    }
+
+    .animate-float-3d.delay-1000 {
+        animation-delay: 1s;
+    }
+
+    .animate-pulse {
+        animation: pulse 2s infinite;
+    }
+
+    /* Custom asteroid shapes using clip-path */
+    .clip-asteroid {
+        clip-path: polygon(50% 0%, 80% 20%, 100% 50%, 70% 80%, 40% 100%, 20% 80%, 0% 50%, 30% 20%);
+    }
+
+    /* Adding shadow and depth */
+    .shadow-lg {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+</style>
 </head>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
     <!-- Navigation -->
@@ -26,18 +83,32 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-blue-600 text-white py-20">
-        <div class="max-w-7xl mx-auto text-center">
+    <section class="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-20 relative overflow-hidden">
+        <!-- Background animation shapes -->
+        <div class="absolute inset-0 bg-white opacity-5 transform rotate-45"></div>
+        <div class="absolute inset-0 bg-blue-300 clip-asteroid opacity-20 rounded-lg w-40 h-40 -top-20 -right-20 animate-pulse"></div>
+    
+        <!-- Asteroid-like 3D shapes -->
+        <div class="absolute top-1/3 left-1/3 bg-blue-200 w-24 h-24 clip-asteroid opacity-10 animate-float-3d shadow-lg"></div>
+        <div class="absolute top-2/3 right-1/4 bg-blue-400 w-32 h-32 clip-asteroid opacity-20 animate-float-3d delay-1000 shadow-lg"></div>
+        <div class="absolute bottom-0 left-1/4 bg-white w-20 h-20 clip-asteroid opacity-5 animate-float-3d delay-500 shadow-lg"></div>
+    
+        <div class="max-w-7xl mx-auto text-center relative z-10">
             <div class="mb-8">
-                <!-- Circular Profile Image Placeholder -->
-                <img src="anime.png" alt="Profile Image" class="mx-auto rounded-full border-4 border-white w-40 h-40 object-cover">
+                <!-- Circular Profile Image Placeholder with hover animation -->
+                <img src="anime.png" alt="Profile Image" class="mx-auto rounded-full border-4 border-white w-40 h-40 object-cover transform hover:scale-110 transition-transform duration-500 ease-in-out shadow-lg">
             </div>
-            <h2 class="text-4xl font-bold">Hi, I'm Akash</h2>
-            <p class="mt-4 text-lg">Full-Stack Developer with 6+ years of experience building scalable applications and leading technical teams.</p>
-            <a href="#projects" class="mt-8 inline-block bg-white text-blue-600 font-bold py-3 px-6 rounded-full">Explore My Work</a>
+            
+            <!-- Text with subtle fade-in animation -->
+            <h2 class="text-4xl font-bold opacity-0 animate-fade-in">Hi, I'm Akash</h2>
+            <p class="mt-4 text-lg opacity-0 animate-fade-in delay-500">Full-Stack Developer with 6+ years of experience building scalable applications and leading technical teams.</p>
+            
+            <!-- Button with hover effect -->
+            <a href="#projects" class="mt-8 inline-block bg-white text-blue-600 font-bold py-3 px-6 rounded-full hover:bg-blue-700 hover:text-white transition-colors duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Explore My Work
+            </a>
         </div>
     </section>
-
     <!-- About Section -->
     <section id="about" class="py-16">
         <div class="max-w-7xl mx-auto px-4 text-center">
